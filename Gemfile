@@ -11,6 +11,7 @@ gem 'jbuilder',             '~> 2.3.1'
 gem 'sdoc',                 '~> 0.4.1', group: :doc
 gem 'bcrypt',               '~> 3.1.10'
 gem 'mini_magick',          '~> 4.2.7'
+gem 'wdm', '>= 0.1.0'
 # gem 'will_paginate',           '3.0.7'
 # gem 'bootstrap-will_paginate', '0.0.10'
 
@@ -21,9 +22,10 @@ group :development, :test do
 end
 
 group :test do
-#  gem 'minitest-reporters', '~> 1.0.18'
-#  gem 'mini_backtrace',     '0.1.3'
-#  gem 'guard-minitest',     '~> 2.4.4'
+  gem 'minitest-reporters', '~> 1.0.18'
+  gem 'mini_backtrace',     '0.1.3'
+  gem 'guard'
+  gem 'guard-minitest',     '~> 2.4.4'
 end
 
 group :production do

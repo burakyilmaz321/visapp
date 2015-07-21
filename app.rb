@@ -1,7 +1,8 @@
 # UserFirm Model
 class UserFirm < ActiveRecord::Base
   has_many :users
-  accepts_nested_attributes_for :users
+  accepts_nested_attributes_for :users, 
+                                :reject_if => proc { |attribute| attribute[:name].blank? }
 end
 
 # User Model

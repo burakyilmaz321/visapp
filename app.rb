@@ -80,13 +80,24 @@ class UsersController < ApplicationController
       params.require(:user).permit(:name)
     end
 end
-  
+
+# Pages controller
+class PagesController < ApplicationController  
+  def home
+  end
+end
+
 # Routes
 Rails.application.routes.draw do
+  root 'pages#home'
+  
+  # User firm routes
   get  'user_firm/index'    
   get  'user_firm/show'
   get  'user_firm/new'
   post 'user_firm/create'
+  
+  # User routes
   get  'user/index'
   get  'user/show'
   get  'user/new'
